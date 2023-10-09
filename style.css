@@ -42,7 +42,7 @@ header {
 .box1 {
   padding: 3rem;
   margin: auto;
-  width: 1240px;
+  max-width: 1240px;
 }
 
 .head2 {
@@ -121,12 +121,11 @@ header {
 .row {
   margin: auto;
   margin-top: 25px;
-  width: 1125px;
+  max-width: 1075px;
 }
 
 .section {
   display: grid;
-  grid-template-columns: 100px;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
@@ -187,6 +186,8 @@ h5 {
 .img{
   opacity: 0.8;
   z-index: 3;
+  width: 540px;
+  height: 385px;
 }
 .footer {
   display: grid;
@@ -197,4 +198,28 @@ h5 {
   border-radius: 50%;
   gap: 40px;
   display: grid;
+}
+@media (max-width: 620px){
+  .item{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px){
+  .item{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 1170px){
+  .img{
+    width:500px;
+    height: 350px;
+  }
+}
+
+@media(max-width: 1000px){
+  .img{
+    width: 450px;
+    height: 300px;
+  }
 }
